@@ -3,3 +3,11 @@ html
     ion-view(title='Dashboard')
       ion-content.padding
         h1 Dash
+        
+        .list.card(ng-show='rootuser')
+            .item.item-avatar
+                img(src='{{rootuser.avatar}}')
+                h3 Welcome back, {{rootuser.username}}!
+        button.button.button-block.button-assertive(ng-show='rootuser', ng-click='logout()') Log Out
+      
+            

@@ -1,10 +1,13 @@
 (function(){
     'use strict';
     angular.module('starter')
-        .factory('User', ['$http', function($http){
+        .factory('User', ['$http', 'origin', function($http, origin){
             function login(user){
-                return $http.post('http://localhost:3334/login', user);
+                return $http.post(origin+'/login', user);
             }
-            return{login:login};
+            function logout(){
+                return $http.delete(origin+'/logout');
+            }
+            return{login:login, logout:logout};
         }]);
 })();

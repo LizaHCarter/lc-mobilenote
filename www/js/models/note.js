@@ -1,10 +1,10 @@
 (function(){
     'use strict';
-    
     angular.module('starter')
-    .factory('Note', ['$http', function($http){
+    .factory('Note', ['$http', 'origin', function($http, origin){
         function count(){
-            return $http.get('http://localhost:3334/notes/count');
+            return $http.get(origin+'/notes/count');
         }
+        return{count:count};
     }]);
 })();
