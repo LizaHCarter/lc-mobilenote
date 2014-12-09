@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+  <body>
+    <ion-view title="Account">
+      <ion-content class="padding">
+        <h1>Account</h1>
+        <div class="list">
+          <div class="item item-input-inset">
+            <label class="item-input-wrapper">
+              <input ng-model="user.username" type="text" placeholder="Username">
+            </label>
+          </div>
+          <div class="item item-input-inset">
+            <label class="item-input-wrapper">
+              <input ng-model="user.password" type="password" placeholder="Password">
+            </label>
+          </div>
+        </div>
+        <button ng-click="login(user)" class="button button-block button-balanced">Login</button>
+      </ion-content>
+    </ion-view>
+  </body>
+</html>

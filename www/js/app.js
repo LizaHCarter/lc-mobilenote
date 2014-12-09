@@ -5,7 +5,7 @@
 // the 2nd parameter is an array of 'requires'
 // 'starter.services' is found in services.js
 // 'starter.controllers' is found in controllers.js
-angular.module('starter', ['ionic', 'starter.controllers', 'starter.services'])
+angular.module('starter', ['ionic', 'starter.services'])
 
 .run(function($ionicPlatform){
   'use strict';
@@ -35,7 +35,7 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services'])
     .state('tab', {
       url: '/tab',
       abstract: true,
-      templateUrl: 'templates/tabs.jade'
+      templateUrl: 'templates/tabs.html'
     })
 
     // Each tab has its own nav history stack:
@@ -44,7 +44,7 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services'])
       url: '/dash',
       views: {
         'tab-dash': {
-          templateUrl: 'templates/tab-dash.jade',
+          templateUrl: 'templates/tab-dash.html',
           controller: 'DashCtrl'
         }
       }
@@ -54,7 +54,7 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services'])
       url: '/friends',
       views: {
         'tab-friends': {
-          templateUrl: 'templates/tab-friends.jade',
+          templateUrl: 'templates/tab-friends.html',
           controller: 'FriendsCtrl'
         }
       }
@@ -63,7 +63,7 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services'])
       url: '/friend/:friendId',
       views: {
         'tab-friends': {
-          templateUrl: 'templates/friend-detail.jade',
+          templateUrl: 'templates/friend-detail.html',
           controller: 'FriendDetailCtrl'
         }
       }
@@ -73,7 +73,7 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services'])
       url: '/account',
       views: {
         'tab-account': {
-          templateUrl: 'templates/tab-account.jade',
+          templateUrl: 'templates/tab-account.html',
           controller: 'AccountCtrl'
         }
       }

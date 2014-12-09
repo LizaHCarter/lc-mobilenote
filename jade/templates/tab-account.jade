@@ -1,0 +1,13 @@
+html
+  body
+    ion-view(title='Account')
+      ion-content.padding
+        h1 Account
+        .list
+            .item.item-input-inset
+                label.item-input-wrapper
+                    input(ng-model='user.username', type='text', placeholder='Username')
+            .item.item-input-inset
+                label.item-input-wrapper
+                    input(ng-model='user.password', type='password', placeholder='Password')   
+        button.button.button-block.button-balanced(ng-click='login(user)') Login
